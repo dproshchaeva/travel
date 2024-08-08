@@ -1,0 +1,286 @@
+/* lato-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: #102746
+}
+
+.img{
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    max-width: 1060px;
+    margin: 0 auto;
+}
+.wrapper-full{
+    max-width: 1262px;
+    height: auto;
+}
+.section-title{
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after{
+    display: block;
+    content: '';
+    width: 253px;
+    height: 3px;
+    background-color: #006dfe;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+/*Header styles start*/
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+}
+.header__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 56px;
+}
+.header__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.header__item{
+    margin-right: 82px;
+}
+.header__item:last-child{
+    margin-right: 0;
+}
+.header__link{
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    text-decoration: none;
+}
+.header__link:hover, .header__link:focus, .header__link:active{
+    opacity: .75;
+}
+
+/*Header styles end*/
+
+
+
+/*Intro styles start*/
+
+.intro{
+    min-height: 100vh;
+    background: url(../img/intro-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 263px;
+}
+.intro__title{
+    max-width: 619px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
+    margin-bottom: 22px;
+}
+.intro__subtitle{
+    max-width: 546px;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 59px;
+}
+
+.serach-form__info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.search-form__field{
+    width: 297px;
+    background-color: transparent;
+    background: url(../img/svg/circle-icon.svg) no-repeat left 3px;
+    background-size: 20px;
+    border: 0;
+    border-bottom: 2px solid #BFC0C5;
+    margin-right: 60px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff
+}
+.search-form__field::placeholder{
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff
+}
+.search-form__submit{
+    padding: 15 px 39 px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    color:white;
+    background: #1B7DFF;
+    border: 0;
+}
+.search-form__submit:hover, .search-form__submit:focus, .search-form__submit:active{
+    background: #0e66da;
+}
+/*Intro styles end*/
+
+/*Benefits styles*/
+.benefits{
+    margin-bottom: 131px;
+}
+.benefits__wrap{
+    max-width: 1262px;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 0px 2 px 20 px color rgba(21,24,36, 0.15993);
+    position: relative;
+}
+
+.benefits__title{
+    width: 100%;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    padding: 93 px 100 px 88 px 100 px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: white;
+
+}
+.benefits__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 55 px;
+    padding: 0 1000 px;
+}
+ .benefits__card{
+    grid-column: span 1;
+    margin-bottom: 112px;;
+ }
+ .benefits-card-pic{
+    max-width: 66px;
+    margin-bottom: 37px;
+ }
+.benefits__card-thumb{
+   display: block; 
+}
+
+.benefits__card-title{
+    font-weight: 500;
+    font-size: 18 px;
+    line-height: 24 px;
+    margin-bottom: 2z6 px;
+}
+.benefits__card-desc{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 39 px;
+}
+
+.benefits__card-more{
+    display: iline-block;
+    padding-right: 59px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #006dfe;
+    text-decoration: none;
+    background: url(../img/svg/right-arrow-icon.svg) no-repeat 95% center;
+    transition: .2s all;
+
+}
+
+.benefits__card-more:hover, .benefits__card-more:focus{
+    background: url(../img/svg/right-arrow-icon.svg) no-repeat right center;
+}
+
+/*Benefits styles end*/
+
+/*Places styles start*/
+.places__caption{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.places__title{
+    margin-right: 16px;
+
+}
+.places__view-all{
+    font-size: 16px;
+    color: #006dfe;
+    text-decoration: none;
+    padding-right: 59px;
+    background: url(../img/svg/right-arrow-icon.svg) no-repeat right center;
+}
+.places__view-all:hover, .places__view-all:focus{
+    opacity: .65;
+}
+
+.places__cards{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+
+.places__card_size_lg{
+    grid-column: span 3;
+}
+.places__card-pic{
+    height: 354px;
+    object-fit: cover;
+
+}
+/*Places ctyles end*/
+
