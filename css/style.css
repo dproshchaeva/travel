@@ -49,7 +49,7 @@ body{
 }
 .wrapper-full{
     max-width: 1262px;
-    height: auto;
+    margin: 0 auto;
 }
 .section-title{
     font-weight: 500;
@@ -78,6 +78,13 @@ body{
     top:0;
     left:0;
     width:100%;
+    transition: .2s linear;
+    padding: 20px;
+    z-index: ;
+
+}
+.header__active{
+    background: #0e1d28;
 }
 .header__wrapper{
     display: flex;
@@ -117,6 +124,8 @@ body{
     background: url(../img/intro-bg.jpg) no-repeat center;
     background-size: cover;
     padding-top: 263px;
+    padding-bottom: 223px;
+
 }
 .intro__title{
     max-width: 619px;
@@ -171,6 +180,8 @@ body{
 }
 /*Intro styles end*/
 
+
+
 /*Benefits styles*/
 .benefits{
     margin-bottom: 131px;
@@ -179,7 +190,7 @@ body{
     max-width: 1262px;
     background-color: white;
     margin: 0 auto;
-    box-shadow: 0px 2 px 20 px color rgba(21,24,36, 0.15993);
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
     position: relative;
 }
 
@@ -188,27 +199,27 @@ body{
     font-weight: 500;
     font-size: 35px;
     line-height: 42px;
-    padding: 93 px 100 px 88 px 100 px;
+    padding: 93px 100px 88px 100px;
     position: absolute;
     top: 0;
     left: 0;
     transform: translateY(-100%);
     background-color: white;
-
 }
 .benefits__cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 55 px;
-    padding: 0 1000 px;
+    grid-column-gap: 55px;
+    padding: 0 100px;
 }
  .benefits__card{
     grid-column: span 1;
-    margin-bottom: 112px;;
+    margin-bottom: 112px;
  }
  .benefits-card-pic{
-    max-width: 66px;
     margin-bottom: 37px;
+    max-width: 66px;
+    
  }
 .benefits__card-thumb{
    display: block; 
@@ -216,18 +227,18 @@ body{
 
 .benefits__card-title{
     font-weight: 500;
-    font-size: 18 px;
-    line-height: 24 px;
-    margin-bottom: 2z6 px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 26px;
 }
 .benefits__card-desc{
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 39 px;
+    margin-bottom: 39px;
 }
 
 .benefits__card-more{
-    display: iline-block;
+    display: inline-block;
     padding-right: 59px;
     font-size: 16px;
     line-height: 24px;
@@ -252,10 +263,8 @@ body{
     justify-content: space-between;
     margin-bottom: 36px;
 }
-
 .places__title{
-    margin-right: 16px;
-
+    margin-right: 15px;
 }
 .places__view-all{
     font-size: 16px;
@@ -272,15 +281,165 @@ body{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
+    margin-bottom: 100px;
+}
+.places__card{
+    position: relative;
+}
+
+
+
+.places__card::after{
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 24, 36, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.places__card-title{
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
+    position: absolute;
+    bottom: 27px;
+    left: 29px;
+    z-index: 3;
+
 }
 
 .places__card_size_lg{
     grid-column: span 3;
 }
+.places__card_size_sm{
+    height: 283px;
+    object-fit: cover;
+}
+
 .places__card-pic{
+    width: 100%;
     height: 354px;
     object-fit: cover;
+}
+
+.places__card-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100;
+    z-index: 4;
+}
+
+.tours{
+    margin-bottom: 139px;
 
 }
+.tours__tour{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 108px;
+    align-items: center;
+    margin-bottom: 77px;
+}
+
+.tour__title{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 85px;
+}
+.tour__desc{
+    font-size: 28px;
+    line-height: 24px;
+    margin-bottom: 58px;
+}
+
+.tour__more{
+    font-size: 16px;
+    color: #006dfe;
+    text-decoration: none;
+    padding-right: 59px;
+    background: url(../img/svg/right-arrow-icon.svg) no-repeat right center;
+}
+.tour__more:hover, .tour__more:focus{
+    opacity: .65;
+}
+.tour__info{
+    padding-left: 47px;
+}
+.top{
+    margin-bottom: 86px;
+}
+
+
+.top__card-pic{
+    position: relative;
+    margin-bottom: 45px;
+}
+.top__card-stats{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(21, 24, 36, 0.6);
+    padding: 16px 25px;
+    justify-content: flex-end;
+
+}
+.top__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 57px;
+}
+.top__card-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    margin: 0 auto 0 0;
+    
+
+}
+.top__card-likes{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    padding-right: 20px;
+    background: url(../img/svg/like.svg) no-repeat right;
+    margin-right: 14px;
+}
+.top__card-comments{
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: white;
+padding-right: 20px;
+background: url(../img/svg/com.svg) no-repeat right;
+}
+.top__card-desc{
+    margin-bottom: 31px;
+    font-size: 16px;
+    line-height: 31px;
+}
+.top__card-more{
+    padding: 12px 19px;
+    background: #006dfe;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+.top__card-more:hover, .top__card-more:focus, .top__card-more:active{
+    background: #006dfe;
+}
+
+
 /*Places ctyles end*/
 
